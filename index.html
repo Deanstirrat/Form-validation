@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="content">
+      <div class="header"></div>
+      <div class="main">
+        <form>
+          <label for="mail">Enter email: </label>
+          <input type="email" name="mail" id="mail" required minlength="5" />
+          <div class="location-box">
+            <div class="country-box">
+              <label for="country">Enter country: </label>
+              <input
+                type="text"
+                name="country"
+                id="country"
+                required
+                pattern="[A-Za-z]+"
+              />
+            </div>
+            <div class="zip-box">
+              <label for="zip">Enter zip code: </label>
+              <input
+                type="text"
+                name="zip"
+                id="zip"
+                required
+                pattern="(\d{5}([\-]\d{4})?)"
+              />
+            </div>
+          </div>
+          <label for="password">Enter password: </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            required
+            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+          />
+          <label for="confirmPassword">Confirm password: </label>
+          <input
+            type="password"
+            name="confirmPassword"
+            id="confirmPassword"
+            required
+          />
+          <button>Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  height: inherit;
+}
+
+.header {
+  padding: auto;
+}
+
+.main {
+  background-color: aliceblue;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.location-box {
+  display: flex;
+  flex-direction: row;
+}
+
+form > input,
+.location-box {
+  margin-bottom: 15px;
+}
+
+form > input:invalid,
+.location-box > input:invalid {
+  outline-color: red;
+}
+
+form > input:valid,
+.location-box > * > input:valid {
+  outline-color: green;
+}
